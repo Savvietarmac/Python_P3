@@ -22,7 +22,7 @@ input()
 desired_amount = 0
 #The deired amount converted into an integer
 #desired_amount_integer = int(desired_amount)
-#points added for everytime a colored box apperes
+#points added for everytime a colored box apperesss
 points = 0
 
 """
