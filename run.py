@@ -1,4 +1,5 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
+import time
 import colorama
 colorama.init()
 """
@@ -10,22 +11,33 @@ def main_menu():
     print(colorama.Fore.YELLOW + colorama.Back.YELLOW + "Now with Color!\n")
     print(colorama.Fore.CYAN + colorama.Back.WHITE + "Press 'A' to start the game\n")
 """    
-def green_color_square():
-    print(colorama.Back.GREEN + "   \n")
-    return green_point
-    
+desired_amount = input("")
 
+points = 0
+
+def green_color_square():
+    global points
+    print(colorama.Back.GREEN + "  \n")
+    time.sleep(3)
+    points += 1
+    
 def blue_color_square():
-    print(colorama.Back.BLUE + "   \n")
-    return blue_point
+    global points
+    print(colorama.Back.BLUE + "  \n")
+    time.sleep(3)
+    points += 1
 
 def red_color_square():
-    print(colorama.Back.RED + "   \n")
-    return red_point
+    global points
+    print(colorama.Back.RED + "  \n")
+    time.sleep(3)
+    points += 1
 
 def yellow_color_square():
-    print(colorama.Back.YELLOW + "   \n")
-    return yellow_point
+    global points
+    print(colorama.Back.YELLOW + "  \n")
+    time.sleep(3)
+    points += 1
 
 
 
@@ -39,3 +51,4 @@ def main():
     blue_color_square()
 
 main()
+print(points)
