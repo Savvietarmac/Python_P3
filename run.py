@@ -18,7 +18,15 @@ print("choose a number between 3 and 30.\n")
 #input for how many colors the user wants to try to remember
 number = input()
 
-if number = 3 >= 30
+if number == 3 >= 30:
+    #place loop function here
+    loop(number)
+elif number < 3:
+    print(number + " number is not between 3 and 30")
+elif number > 30:
+    print(number + " number is not between 3 and 30")
+    
+
 #The desired amount of times the game plays
 desired_amount = 0
 #The deired amount converted into an integer
