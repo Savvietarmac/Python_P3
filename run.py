@@ -16,8 +16,9 @@ print("Use the first letter in each color to guess the order.\n")
 print(colorama.Fore.GREEN + "G " + colorama.Fore.BLUE + "B " + colorama.Fore.RED + "R " + colorama.Fore.YELLOW + "Y ")
 print("choose a number between 3 and 30.\n")
 #input for how many colors the user wants to try to remember
-input()
+number = input()
 
+if number = 3 >= 30
 #The desired amount of times the game plays
 desired_amount = 0
 #The deired amount converted into an integer
