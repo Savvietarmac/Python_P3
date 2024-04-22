@@ -16,15 +16,17 @@ print("Use the first letter in each color to guess the order.\n")
 print(colorama.Fore.GREEN + "G " + colorama.Fore.BLUE + "B " + colorama.Fore.RED + "R " + colorama.Fore.YELLOW + "Y ")
 print("choose a number between 3 and 30.\n")
 #input for how many colors the user wants to try to remember
-number = input()
+number = int(input())
 
 if number == 3 >= 30:
     #place loop function here
     loop(number)
 elif number < 3:
-    print(number + " number is not between 3 and 30")
+    print(f"{number} is less than 3")
 elif number > 30:
-    print(number + " number is not between 3 and 30")
+    print(f"{number} is larger than 30")
+else:
+    print(f"{number} is not a number")
     
 
 #The desired amount of times the game plays
