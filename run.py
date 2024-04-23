@@ -19,52 +19,20 @@ colours = {
     "Y": colorama.back.YELLOW + " " + colorama.Style.RESET_ALL,
 }
 
-def generate_sequence(length):
-    return [random.choice(list(colours.keys())) for _ in range(length)]
-
 def display_welcome():
     print("Welcome to Simon Says\n")
     print("Use the first letter in each color to guess the order.\n")
     print(colorama.Fore.GREEN + "G " + colorama.Fore.BLUE + "B " + colorama.Fore.RED + "R " + colorama.Fore.YELLOW + "Y ")
     print("choose a number between 3 and 30.\n")
 
-def green_color_square():
-    global points
-    print(colorama.Back.GREEN + "  \n")
-    time.sleep(3)
-    points += 1
-    
-def blue_color_square():
-    global points
-    print(colorama.Back.BLUE + "  \n")
-    time.sleep(3)
-    points += 1
+def generate_sequence(length):
+    return [random.choice(list(colours.keys())) for _ in range(length)]
 
-def red_color_square():
-    global points
-    print(colorama.Back.RED + "  \n")
-    time.sleep(3)
-    points += 1
-
-def yellow_color_square():
-    global points
-    print(colorama.Back.YELLOW + "  \n")
-    time.sleep(3)
-    points += 1
-
-"""
-All color funtions above, add points to point decleration,
-also a delay for each time one activates,
-prints the colored boxes in the terminal.
-"""
-"""
-def game():
-    randint(1, desired_amount_integer)
-
-while points <= desired_amount_integer:
-"""
-
-
+def display_sequence(sequence):
+    for color in sequence:
+        print(colours(color), end=" ")
+        time.sleep(1)
+    print (colorama.Style.RESET_ALL + "\n")
 
 def main():
     #main_menu()
