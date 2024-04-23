@@ -46,3 +46,7 @@ seq = generate_sequence(length)
 display_sequence(seq)
 user_guess = get_user_input()
 
+score = 0
+for i in range(len(seq)):
+    if i < len(user_guess) and seq[i] == user_guess[i]:
+        score += 1
