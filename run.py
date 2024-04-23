@@ -5,13 +5,6 @@ import random
 
 colorama.init()
 
-#The desired amount of times the game plays
-desired_amount = 0
-#The deired amount converted into an integer
-#desired_amount_integer = int(desired_amount)
-#points added for everytime a colored box apperesss
-points = 0
-
 colours = {
     "G": colorama.back.GREEN + " " + colorama.Style.RESET_ALL,
     "B": colorama.back.BLUE + " " + colorama.Style.RESET_ALL,
@@ -37,9 +30,15 @@ def display_sequence(sequence):
 def get_user_input():
     return input("Enter the sequence of colors using (GRBY):").strip().upper()
 
-def main():
-    #main_menu()
-    green_color_square()
-    blue_color_square()
-    red_color_square()
-    yellow_color_square()
+def play_game():
+    display_welcome()
+    while True:
+        try:
+            length = int(input("Enter length"))
+            if length < 3 or length > 30:
+                print("error")
+                continue
+            break
+        except ValueError:
+            print("Enter valid number")
+
