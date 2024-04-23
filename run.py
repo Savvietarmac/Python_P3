@@ -42,3 +42,7 @@ def play_game():
         except ValueError:
             print("Enter valid number")
 
+seq = generate_sequence(length)
+display_sequence(seq)
+user_guess = get_user_input()
+
