@@ -6,10 +6,10 @@ import random
 colorama.init()
 
 colours = {
-    "G": colorama.back.GREEN + " " + colorama.Style.RESET_ALL,
-    "B": colorama.back.BLUE + " " + colorama.Style.RESET_ALL,
-    "R": colorama.back.RED + " " + colorama.Style.RESET_ALL,
-    "Y": colorama.back.YELLOW + " " + colorama.Style.RESET_ALL,
+    "G": colorama.Back.GREEN + " " + colorama.Style.RESET_ALL,
+    "B": colorama.Back.BLUE + " " + colorama.Style.RESET_ALL,
+    "R": colorama.Back.RED + " " + colorama.Style.RESET_ALL,
+    "Y": colorama.Back.YELLOW + " " + colorama.Style.RESET_ALL,
 }
 
 def display_welcome():
@@ -50,3 +50,9 @@ score = 0
 for i in range(len(seq)):
     if i < len(user_guess) and seq[i] == user_guess[i]:
         score += 1
+
+print(f"Your score {score}/{length}")
+if score == length:
+    print("You win!")
+else:
+    print("Try again!")
