@@ -32,6 +32,14 @@ All color funtions underneath, add points to point decleration,
 also a delay for each time one activates,
 prints the colored boxes in the terminal.
 """
+
+colours = {
+    "G": colorama.back.GREEN + " " + colorama.Style.RESET_ALL,
+    "B": colorama.back.BLUE + " " + colorama.Style.RESET_ALL,
+    "R": colorama.back.RED + " " + colorama.Style.RESET_ALL,
+    "Y": colorama.back.YELLOW + " " + colorama.Style.RESET_ALL,
+}
+
 def green_color_square():
     global points
     print(colorama.Back.GREEN + "  \n")
