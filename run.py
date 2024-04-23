@@ -1,6 +1,8 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import time
 import colorama
+import randome
+
 colorama.init()
 """
 def main_menu():
@@ -11,12 +13,12 @@ def main_menu():
     print(colorama.Fore.YELLOW + colorama.Back.YELLOW + "Now with Color!\n")
     print(colorama.Fore.CYAN + colorama.Back.WHITE + "Press 'A' to start the game\n")
 """    
-print("Welcome to Simon Says\n")
-print("Use the first letter in each color to guess the order.\n")
-print(colorama.Fore.GREEN + "G " + colorama.Fore.BLUE + "B " + colorama.Fore.RED + "R " + colorama.Fore.YELLOW + "Y ")
-print("choose a number between 3 and 30.\n")
-#input for how many colors the user wants to try to remember
-input()
+def display_welcome():
+    print("Welcome to Simon Says\n")
+    print("Use the first letter in each color to guess the order.\n")
+    print(colorama.Fore.GREEN + "G " + colorama.Fore.BLUE + "B " + colorama.Fore.RED + "R " + colorama.Fore.YELLOW + "Y ")
+    print("choose a number between 3 and 30.\n")
+
 
 #The desired amount of times the game plays
 desired_amount = 0
