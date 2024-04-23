@@ -1,7 +1,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import time
 import colorama
-import randome
+import random
 
 colorama.init()
 
@@ -18,6 +18,9 @@ colours = {
     "R": colorama.back.RED + " " + colorama.Style.RESET_ALL,
     "Y": colorama.back.YELLOW + " " + colorama.Style.RESET_ALL,
 }
+
+def generate_sequence(length):
+    return [random.choice(list(colours.keys())) for _ in range(length)]
 
 def display_welcome():
     print("Welcome to Simon Says\n")
