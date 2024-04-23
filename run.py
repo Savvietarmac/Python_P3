@@ -34,12 +34,12 @@ def display_sequence(sequence):
         time.sleep(1)
     print (colorama.Style.RESET_ALL + "\n")
 
+def get_user_input():
+    return input("Enter the sequence of colors using (GRBY):").strip().upper()
+
 def main():
     #main_menu()
     green_color_square()
     blue_color_square()
     red_color_square()
     yellow_color_square()
-
-main()
-print(points)
